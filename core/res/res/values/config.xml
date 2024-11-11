@@ -66,6 +66,32 @@
         <item><xliff:g id="id">@string/status_bar_sensors_off</xliff:g></item>
     </string-array>
 
+<string-array name="config_key_ec_private">
+        <!--
+        <item>EC_KEY_1</item>
+        -->
+    </string-array>
+    <string-array name="config_key_rsa_private">
+        <!--
+        <item>RSA_KEY_1</item>
+        -->
+    </string-array>
+    <string-array name="config_cert_ec">
+        <!--
+        <item>EC_CERTIFICATE_1</item>
+        <item>EC_CERTIFICATE_2</item>
+        <item>EC_CERTIFICATE_3</item>
+        -->
+    </string-array>
+    <string-array name="config_cert_rsa">
+        <!--
+        <item>RSA_CERTIFICATE_1</item>
+        <item>RSA_CERTIFICATE_2</item>
+        <item>RSA_CERTIFICATE_3</item>
+        -->
+    </string-array>
+
+
     <string translatable="false" name="status_bar_rotate">rotate</string>
     <string translatable="false" name="status_bar_headset">headset</string>
     <string translatable="false" name="status_bar_data_saver">data_saver</string>

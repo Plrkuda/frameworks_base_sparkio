@@ -216,20 +216,13 @@ public class QSFragment extends LifecycleFragment implements QS, CommandQueue.Ca
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container,
+            Bundle savedInstanceState) {
         try {
             Trace.beginSection("QSFragment#onCreateView");
-            LayoutInflater clonedInflater = inflater.cloneInContext(new ContextThemeWrapper(getContext(),
+            inflater = inflater.cloneInContext(new ContextThemeWrapper(getContext(),
                     R.style.Theme_SystemUI_QuickSettings));
-
-            return clonedInflater.inflate(R.layout.qs_panel, container, false);
-        } catch (Exception e) {
-            // let other components know that qs panel
-            // is not yet inflated by returning a null layout
-            // this will result to a series of NPEs that 
-            // will be addressed/resolved by this CL.
-            Log.d(TAG, "Exception occurred during onCreateView, QS panel is not yet inflated", e);
-            return null;
+            return inflater.inflate(R.layout.qs_panel, container, false);
         } finally {
             Trace.endSection();
         }
@@ -284,9 +277,7 @@ public class QSFragment extends LifecycleFragment implements QS, CommandQueue.Ca
             setQsVisible(savedInstanceState.getBoolean(EXTRA_VISIBLE));
             setExpanded(savedInstanceState.getBoolean(EXTRA_EXPANDED));
             setListening(savedInstanceState.getBoolean(EXTRA_LISTENING));
-            if (view != null) {
                 setEditLocation(view);
-            }
             mQSCustomizerController.restoreInstanceState(savedInstanceState);
             if (mQsExpanded) {
                 mQSPanelController.getTileLayout().restoreInstanceState(savedInstanceState);
@@ -418,9 +409,7 @@ public class QSFragment extends LifecycleFragment implements QS, CommandQueue.Ca
     public void onConfigurationChanged(Configuration newConfig) {
         super.onConfigurationChanged(newConfig);
         View editView = getView();
-        if (editView != null) {
             setEditLocation(editView);
-        }
         if (newConfig.getLayoutDirection() != mLayoutDirection) {
             mLayoutDirection = newConfig.getLayoutDirection();
             if (mQSAnimator != null) {

@@ -50,6 +50,8 @@ public class KeyguardClockSwitch extends RelativeLayout {
     public static final int LARGE = 0;
     public static final int SMALL = 1;
 
+private boolean mEnableCustomClock = true;
+
     /** Returns a region for the large clock to position itself, based on the given parent. */
     public static Rect getLargeClockRegion(ViewGroup parent) {
         int largeClockTopMargin = parent.getResources()

@@ -141,6 +141,10 @@ public class QSPanel extends LinearLayout implements Tunable {
     private final Rect mClippingRect = new Rect();
     private ViewGroup mMediaHostView;
     private boolean mShouldMoveMediaOnExpansion = true;
+    public int mMaxColumnsLandscape;
+    public int mMaxColumnsMediaPlayer;
+    public int mMaxColumnsPortrait;
+    public int mMaxRowsPortrait;
     private boolean mUsingCombinedHeaders = false;
     private QSLogger mQsLogger;
     /**
@@ -160,6 +164,14 @@ public class QSPanel extends LinearLayout implements Tunable {
                 R.dimen.quick_settings_bottom_margin_media);
         mMediaTopMargin = getResources().getDimensionPixelSize(
                 R.dimen.qs_tile_margin_vertical);
+mMaxColumnsLandscape = getResources().getInteger(
+                 R.integer.quick_qs_panel_num_columns_landscape);
+         mMaxColumnsMediaPlayer = getResources().getInteger(
+                 R.integer.quick_qs_panel_num_columns_media);
+mMaxColumnsPortrait = getResources().getInteger(
+                 R.integer.quick_settings_num_columns_a11);
+mMaxRowsPortrait = getResources().getInteger(
+                 R.integer.quick_settings_max_rows_custom);
         mContext = context;
 
         setOrientation(VERTICAL);
@@ -172,6 +184,8 @@ public class QSPanel extends LinearLayout implements Tunable {
         TunerService tunerService = Dependency.get(TunerService.class);
         mTop = tunerService.getValue(QS_BRIGHTNESS_SLIDER_POSITION, 0) == 0;
     }
+
+
 
     void initialize(QSLogger qsLogger) {
         mQsLogger = qsLogger;
@@ -222,6 +236,17 @@ public class QSPanel extends LinearLayout implements Tunable {
         mClippingRect.left = 0;
         mClippingRect.top = -1000;
         mHorizontalContentContainer.setClipBounds(mClippingRect);
+updateColumns();
+    }
+
+public void updateColumns() {
+        Object obj = getResources().getConfiguration().orientation == 2 ? 1 : null;
+        int i = this.mUsingHorizontalLayout ? this.mMaxColumnsMediaPlayer : this.mMaxColumnsLandscape;
+        QSTileLayout qSTileLayout = this.mTileLayout;
+        if (obj == null) {
+            i = this.mMaxColumnsPortrait;
+        }
+        qSTileLayout.setMaxColumns(i);
     }
 
     /**

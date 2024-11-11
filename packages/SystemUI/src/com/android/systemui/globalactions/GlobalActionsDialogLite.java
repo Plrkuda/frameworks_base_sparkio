@@ -207,8 +207,8 @@ public class GlobalActionsDialogLite implements DialogInterface.OnDismissListene
     private static final String RESTART_ACTION_KEY_RESTART_RECOVERY = "restart_recovery";
     private static final String RESTART_ACTION_KEY_RESTART_BOOTLOADER = "restart_bootloader";
     private static final String RESTART_ACTION_KEY_RESTART_DOWNLOAD = "restart_download";
-    private static final String RESTART_ACTION_KEY_RESTART_FASTBOOT = "restart_fastboot";
     private static final String RESTART_ACTION_KEY_RESTART_SYSTEMUI = "restart_systemui";
+    private static final String RESTART_ACTION_KEY_RESTART_FASTBOOT = "restart_fastboot";
 
     // See NotificationManagerService#scheduleDurationReachedLocked
     private static final long TOAST_FADE_TIME = 333;
@@ -726,8 +726,8 @@ public class GlobalActionsDialogLite implements DialogInterface.OnDismissListene
         RestartRecoveryAction recAction = new RestartRecoveryAction();
         RestartBootloaderAction blAction = new RestartBootloaderAction();
         RestartDownloadAction dlAction = new RestartDownloadAction();
+RestartSystemUIAction sysuiAction = new RestartSystemUIAction();
         RestartFastbootAction fbAction = new RestartFastbootAction();
-        RestartSystemUIAction sysuiAction = new RestartSystemUIAction();
         ArraySet<String> addedKeys = new ArraySet<>();
         ArraySet<String> addedRestartKeys = new ArraySet<String>();
         List<Action> tempActions = new ArrayList<>();
@@ -818,10 +818,10 @@ public class GlobalActionsDialogLite implements DialogInterface.OnDismissListene
                 addIfShouldShowAction(mRestartItems, blAction);
             } else if (RESTART_ACTION_KEY_RESTART_DOWNLOAD.equals(actionKey)) {
                 addIfShouldShowAction(mRestartItems, dlAction);
-            } else if (RESTART_ACTION_KEY_RESTART_FASTBOOT.equals(actionKey)) {
-                addIfShouldShowAction(mRestartItems, fbAction);
             } else if (RESTART_ACTION_KEY_RESTART_SYSTEMUI.equals(actionKey)) {
                 addIfShouldShowAction(mRestartItems, sysuiAction);
+            } else if (RESTART_ACTION_KEY_RESTART_FASTBOOT.equals(actionKey)) {
+                addIfShouldShowAction(mRestartItems, fbAction);
             }
             // Add here so we don't add more than one.
             addedRestartKeys.add(actionKey);

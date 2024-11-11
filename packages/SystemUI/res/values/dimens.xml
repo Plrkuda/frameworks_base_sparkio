@@ -31,6 +31,56 @@
     <!-- size of the dead zone when touches have recently occurred elsewhere on screen -->
     <dimen name="navigation_bar_deadzone_size_max">32dp</dimen>
 
+   <!-- Battery Icon Height -->
+    <dimen name="status_bar_battery_icon_height_landscape_a">15.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_b">15.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_c">14.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_d">16.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_e">16.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_f">16.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_g">12.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_h">16.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_i">14.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_j">15.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_k">18.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_l">15.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_m">16.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_n">13.0dip</dimen>
+    <dimen name="status_bar_battery_icon_height_landscape_o">14.0dip</dimen>
+    <!-- Battery Icon Width -->
+    <dimen name="status_bar_battery_icon_width_landscape_a">25.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_b">25.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_c">24.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_d">22.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_e">24.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_f">28.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_g">20.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_h">28.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_i">25.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_j">24.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_k">26.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_l">27.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_m">28.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_n">25.0dip</dimen>
+    <dimen name="status_bar_battery_icon_width_landscape_o">22.0dip</dimen>
+
+<dimen name="custom_clock_2_avatar_radius">16dp</dimen>
+    <dimen name="custom_clock_2_avatar_width">70dp</dimen>
+    <dimen name="custom_clock_frame_margin_top">28dp</dimen>
+    <dimen name="nt_date_size">20dp</dimen>
+    <dimen name="nt_clock_size">110dp</dimen>
+
+	<dimen name="kg_widget_margin_vertical">10dp</dimen>
+    <dimen name="kg_widgets_margin_horizontal">12dp</dimen>
+	<dimen name="kg_widget_margin_bottom">6dp</dimen>
+    <dimen name="kg_widgets_main_margin_start">12dp</dimen>
+    <dimen name="kg_widgets_main_margin_end">12dp</dimen>
+    <dimen name="kg_widget_circle_size">68dp</dimen>
+    <dimen name="kg_widgets_icon_padding">24dp</dimen>
+    <dimen name="kg_main_widgets_icon_padding">20dp</dimen>
+    <dimen name="kg_widget_main_height">88dp</dimen>
+    <dimen name="kg_widget_main_width">175dp</dimen>
+
     <!-- dimensions for the navigation bar handle -->
     <dimen name="navigation_handle_radius">2dp</dimen>
     <dimen name="navigation_handle_radius1">0.5dp</dimen>
@@ -578,7 +628,7 @@
     <dimen name="pull_span_min">25dp</dimen>
 
     <dimen name="qs_corner_radius">?android:attr/dialogCornerRadius</dimen>
-    <dimen name="qs_tile_height">80dp</dimen>
+    <dimen name="qs_tile_height">100dp</dimen>
     <dimen name="qs_tile_margin_horizontal">8dp</dimen>
     <dimen name="qs_tile_margin_vertical">@dimen/qs_tile_margin_horizontal</dimen>
     <dimen name="qs_tile_margin_top_bottom">4dp</dimen>

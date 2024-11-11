@@ -111,6 +111,7 @@ public class BatteryMeterViewController extends ViewController<BatteryMeterView>
                 public void onIsOverheatedChanged(boolean isOverheated) {
                     mView.onIsOverheatedChanged(isOverheated);
                 }
+
             };
 
     // Some places may need to show the battery conditionally, and not obey the tuner

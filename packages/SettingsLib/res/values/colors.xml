@@ -39,6 +39,10 @@
     <color name="dark_mode_icon_color_single_tone">#99000000</color>
     <color name="light_mode_icon_color_single_tone">#ffffff</color>
 
+<!-- Battery level colors -->
+    <color name="cargingbolt_single_tone">#00000000</color>
+        <color name="batterymeter_saver_color">#FBBC04</color>
+
     <color name="user_avatar_color_bg">?android:attr/colorBackgroundFloating</color>
 
     <!-- QR code scanner colors -->

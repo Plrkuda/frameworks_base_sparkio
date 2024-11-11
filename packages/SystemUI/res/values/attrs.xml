@@ -223,5 +223,9 @@
         <attr name="iconStartContentDescription" format="reference" />
         <attr name="iconEndContentDescription" format="reference" />
     </declare-styleable>
+    <declare-styleable name="WeatherTextView">
+        <attr name="weatherText" format="string" />
+    </declare-styleable>
+
 </resources>
 

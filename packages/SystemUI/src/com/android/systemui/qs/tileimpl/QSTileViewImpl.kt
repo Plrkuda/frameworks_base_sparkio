@@ -253,7 +253,7 @@ open class QSTileViewImpl @JvmOverloads constructor(
 	if (isA11Style) {
             val iconContainerSize = context.resources.getDimensionPixelSize(R.dimen.qs_quick_tile_size)
             radiusActive = iconContainerSize / 2f
-            radiusInactive = iconContainerSize / 4f
+            radiusInactive = iconContainerSize / 3f
             iconContainer = LinearLayout(context)
             iconContainer.layoutParams = LayoutParams(iconContainerSize, iconContainerSize)
             iconContainer.clipChildren = false

@@ -6665,6 +6665,38 @@ public final class Settings {
          * @hide
          */
         public static final String BATTERY_LEVEL_COLORS = "battery_level_colors";
+
+/**
+         * @hide
+         */
+        public static final String LOCKSCREEN_WEATHER_LOCATION = "lockscreen_weather_location";
+
+        /**
+         * @hide
+         */
+        public static final String LOCKSCREEN_WEATHER_TEXT = "lockscreen_weather_text";
+
+/**
+         * Statusbar logo
+         * @hide
+         */
+        public static final String STATUS_BAR_LOGO = "status_bar_logo";
+
+        /**
+         * Position of Status bar logo
+         * 0 - Left (default)
+         * 1 - Right
+         * @hide
+         */
+        public static final String STATUS_BAR_LOGO_POSITION = "status_bar_logo_position";
+
+        /**
+         * Statusbar logo custom style
+         * @hide
+         */
+        public static final String STATUS_BAR_LOGO_STYLE = "status_bar_logo_style";
+
+
        /**
          * These are all public system settings
          *
@@ -11495,6 +11527,8 @@ public final class Settings {
         public static final String LOCKSCREEN_USE_DOUBLE_LINE_CLOCK =
                 "lockscreen_use_double_line_clock";
 
+        
+
         /**
          * Whether to show the vibrate icon in the Status Bar (default off)
          *
@@ -12673,6 +12707,20 @@ public final class Settings {
          * @hide
          */
         public static final String MEDIA_CONTROLS_ALWAYS_SHOW_TIME = "media_controls_always_show_time";
+
+       /**
+         * Whether to use the lockscreen custom clock
+         *
+         * @hide
+         */
+        public static final String CLOCK_LS =
+                "clock_ls";
+
+
+          /**
+          * @hide
+          */
+         public static final String LOCKSCREEN_WEATHER_NEW = "lockscreen_weather_new";
 
         /**
          * These entries are considered common between the personal and the managed profile,

@@ -40,6 +40,12 @@
         android:clipChildren="false"
         android:visibility="gone" />
 
+<include 
+        android:id="@+id/clock_ls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/keyguard_clock_style" />
+
     <!-- Not quite optimal but needed to translate these items as a group. The
          NotificationIconContainer has its own logic for translation. -->
     <LinearLayout
@@ -52,8 +58,8 @@
 
       <include layout="@layout/keyguard_slice_view"
                android:id="@+id/keyguard_slice_view"
-               android:layout_width="match_parent"
-               android:layout_height="wrap_content" />
+               android:layout_width="0dp"
+               android:layout_height="0dp" />
 
         <include layout="@layout/current_weather_view"
             android:id="@+id/weather_container"
@@ -61,6 +67,10 @@
             android:layout_height="wrap_content"
             android:visibility="gone" />
 
+<include layout="@layout/keyguard_clock_widgets"
+            android:id="@+id/keyguard_widgets"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
       <com.android.systemui.statusbar.phone.NotificationIconContainer
           android:id="@+id/left_aligned_notification_icon_container"
           android:layout_width="match_parent"

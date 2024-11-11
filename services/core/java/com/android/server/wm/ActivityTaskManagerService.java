@@ -121,6 +121,8 @@ import static com.android.server.wm.Task.REPARENT_KEEP_ROOT_TASK_AT_FRONT;
 import static com.android.server.wm.WindowManagerService.MY_PID;
 import static com.android.server.wm.WindowManagerService.UPDATE_FOCUS_NORMAL;
 
+import com.android.internal.util.PropImitationHooks;
+
 import android.Manifest;
 import android.annotation.IntDef;
 import android.annotation.NonNull;
@@ -1993,7 +1995,7 @@ public class ActivityTaskManagerService extends IActivityTaskManager.Stub {
 
     @Override
     public RootTaskInfo getFocusedRootTaskInfo() throws RemoteException {
-        if (!PixelPropsUtils.shouldBypassTaskPermission(mContext)) {
+                if (!PropImitationHooks.shouldBypassTaskPermission(mContext)) {
             enforceTaskPermission("getFocusedRootTaskInfo()");
         }
         final long ident = Binder.clearCallingIdentity();
@@ -3025,7 +3027,7 @@ public class ActivityTaskManagerService extends IActivityTaskManager.Stub {
     /** Sets the task stack listener that gets callbacks when a task stack changes. */
     @Override
     public void registerTaskStackListener(ITaskStackListener listener) {
-        if (!PixelPropsUtils.shouldBypassTaskPermission(mContext)) {
+        if (!PropImitationHooks.shouldBypassTaskPermission(mContext)) {
             enforceTaskPermission("registerTaskStackListener()");
         }
         mTaskChangeNotificationController.registerTaskStackListener(listener);
